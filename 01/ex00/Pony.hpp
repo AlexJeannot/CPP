@@ -11,6 +11,8 @@ class Pony
         std::string m_color;
         double      m_height;
         double      m_weight;
+        // Static number of instance
+        static unsigned int m_numberOfInstance;
     
     public:
         // Constructor
@@ -22,9 +24,7 @@ class Pony
 
         // Display
         void displayPony(void) const;
-
-        // Static number of instance
-        static unsigned int m_numberOfInstance;
+        static void checkInstanceNumber(void);
 };
 
 #endif

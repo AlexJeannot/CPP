@@ -33,8 +33,6 @@ int main()
     delete Zombie3;
     delete Zombie4;
     delete Zombie5;
-
-    std::cout << std::endl << std::endl;
-    system("leaks a.out");
+    
     return (0);
 }

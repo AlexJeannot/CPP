@@ -11,7 +11,5 @@ void memoryLeak()
 int main()
 {
     memoryLeak();
-    std::cout << std::endl;
-    system("leaks a.out");
     return (0);
 }

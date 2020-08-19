@@ -13,7 +13,5 @@ int main()
     notRandomHorde.announceHorde();
     std::cout << "\n Horde size = " << notRandomHorde.getHordeSize() << std::endl;
 
-    std::cout << std::endl << std::endl;
-    system("leaks a.out");
     return (0);
 }

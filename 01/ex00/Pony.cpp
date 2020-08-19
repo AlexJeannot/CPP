@@ -24,3 +24,8 @@ void Pony::displayPony(void) const
     std::cout << "Weight: " << m_weight << std::endl;
     std::cout << "Number of pony instance: " << m_numberOfInstance << std::endl;
 }
+
+void Pony::checkInstanceNumber(void)
+{
+    std::cout << std::endl << ">>>   Number of pony instance = "<<Pony::m_numberOfInstance << std::endl;
+}

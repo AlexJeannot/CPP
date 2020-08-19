@@ -9,7 +9,6 @@ Fixed::Fixed(const Fixed& instanceRef)
 {
     std::cout << "Copy constructor called" << std::endl;
     *this = instanceRef;
-   // m_value = instanceRef.getRawBits();
 }
 
 Fixed::Fixed(const int p_value)

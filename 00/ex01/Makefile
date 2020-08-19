@@ -12,9 +12,11 @@ INC_SRCS =	./includes/Contact.hpp	\
 
 OBJS = $(SRCS:.cpp=.o)
 
-#INC = -I $(INC_SRCS)
 CC = clang++
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -std=c++11
+
+%.o : %.cpp
+			$(CC) $(FLAGS) -c $< -o $@
 
 all: $(NAME)
 

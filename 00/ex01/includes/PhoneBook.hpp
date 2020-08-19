@@ -13,7 +13,7 @@ class PhoneBook
     
     public:
         PhoneBook(void);
-        unsigned int    getIndex(void) const;
+        int    getIndex(void) const;
 
         /* ADD METHODS */
         void            addContact(void);

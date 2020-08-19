@@ -35,7 +35,7 @@ class Contact
         /* SEARCH METHODS */
         void        displayContact(void) const;
         void        displayListContact(unsigned int const &index) const;
-        void        displaySpace(unsigned int const& nb) const;
+        void        displaySpace(int const& nb) const;
         void        displayListInformation(std::string const& info) const;
 };
 

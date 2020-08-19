@@ -5,7 +5,7 @@ PhoneBook::PhoneBook(void) : m_index(0)
 
 }
 
-unsigned int PhoneBook::getIndex(void) const
+int PhoneBook::getIndex(void) const
 {
     return (m_index);
 }

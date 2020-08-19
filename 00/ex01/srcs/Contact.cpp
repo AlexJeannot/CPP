@@ -128,9 +128,6 @@ void Contact::displayContact(void) const
 
 void Contact::displayListContact(unsigned int const &index) const
 {
-    unsigned int count;
-    unsigned int size;
-
     std::cout << "|" << "    " << index << "     " << "|";
     this->displayListInformation(m_firstName);
     this->displayListInformation(m_lastName);
@@ -140,8 +137,7 @@ void Contact::displayListContact(unsigned int const &index) const
 
 void Contact::displayListInformation(std::string const& info) const
 {
-    unsigned int count;
-    unsigned int size;
+    int size;
 
     size = info.size();
     if (size <= 10)
@@ -155,10 +151,8 @@ void Contact::displayListInformation(std::string const& info) const
     std::cout << "|";
 }
 
-void Contact::displaySpace(unsigned int const& nb) const
+void Contact::displaySpace(int const& nb) const
 {
-    unsigned int count;
-
-    for (count = 0; count < nb; count++)
+    for (int count = 0; count < nb; count++)
         std::cout << " ";
 }

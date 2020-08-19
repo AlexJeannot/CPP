@@ -25,13 +25,11 @@ char*           ft_uppercase(char* str)
 
 int               main(int argc, char** argv)
 {
-    unsigned int count;
-
     if (argc == 1)
         std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
     else
     {
-        for (count = 1; count < argc; count++)
+        for (int count = 1; count < argc; count++)
             std::cout << ft_uppercase(argv[count]);
         std::cout << std::endl;
     }

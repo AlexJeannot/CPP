@@ -12,7 +12,7 @@ AMateria("ice")
 Ice::Ice(const Ice & other) : 
 AMateria("ice")
 {
-    this->setType(other);
+    this->setXP(other.getXP());
 }
 
 
@@ -27,7 +27,7 @@ Ice::~Ice()
 Ice & Ice::operator=(const Ice & other)
 {
     if (this != &other)
-        this->setType(other);
+        this->setXP(other.getXP());
     return (*this);
 }
 

@@ -58,7 +58,9 @@ int main()
     john.equip(nullptr);
     john.use(0, target);
     john.equip(heapIceMateria);
+    std::cout << "XP avant utilisation : " << heapIceMateria->getXP() << std::endl;
     john.use(0, target);
+    std::cout << "XP apres utilisation : " << heapIceMateria->getXP() << std::endl;
     john.equip(heapIceMateria);
     john.use(1, target);
     john.equip(heapCureMateria);
@@ -94,6 +96,10 @@ int main()
     std::cout << "------ BOUCLE 5 ------" << std::endl;
     for (int count = 0; count < 4; count++)
         john.use(count, target);
+
+    Ice* SecondcopyHeapIceMateria = new Ice(*heapIceMateria);
+    std::cout << "XP original : " << heapIceMateria->getXP() << std::endl;
+    std::cout << "XP copie : " << SecondcopyHeapIceMateria->getXP() << std::endl;
 
     std::cout << std::endl << "----- Nouveau personnage -----" << std::endl;
 

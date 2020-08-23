@@ -22,9 +22,9 @@ std::string const & AMateria::getType() const
     return (this->_type);
 }
 
-void AMateria::setType(const AMateria & other)
+void AMateria::setXP(int xp)
 {
-    this->_type = other._type;
+    this->_xp = xp;
 }
 
 unsigned int AMateria::getXP() const

@@ -19,7 +19,7 @@ class AMateria
 
         /* Other member functions */
         std::string const & getType() const; //Returns the materia type
-        void setType(const AMateria & other);
+        void setXP(int xp);
         unsigned int getXP() const; //Returns the Materia's XP
         virtual AMateria* clone() const = 0;
         virtual void use(ICharacter& target);

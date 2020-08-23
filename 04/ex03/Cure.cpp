@@ -12,7 +12,7 @@ AMateria("cure")
 Cure::Cure(const Cure & other) : 
 AMateria("cure")
 {
-    this->setType(other);
+    this->setXP(other.getXP());
 }
 
 
@@ -27,7 +27,7 @@ Cure::~Cure()
 Cure & Cure::operator=(const Cure & other)
 {
     if (this != &other)
-        this->setType(other);
+        this->setXP(other.getXP());
     return (*this);
 }
 

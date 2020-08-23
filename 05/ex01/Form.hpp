@@ -1,22 +1,27 @@
-#ifndef BUREAUCRAT_HPP
-#define BUREAUCRAT_HPP
+#ifndef FORM_HPP
+#define FORM_HPP
 
 #include <iostream>
 #include <string>
 
-class Bureaucrat
+class Form;
+#include "Bureaucrat.hpp"
+
+class Form
 {
     private:
-        std::string const _name;
-        int _grade;
+        const std::string _name;
+        const int _signGrade;
+        const int _execGrade;
+        bool _signed;
     public:
         /* Constructor and destructors */
-        Bureaucrat(std::string name = "John Doe", int grade = 150);
-        Bureaucrat(const Bureaucrat & other);
-        ~Bureaucrat();
+        Form(std::string name = "AX001", int signGrade = 1, int execGrade = 1);
+        Form(const Form & other);
+        ~Form();
 
         /* Operator overloads */
-        Bureaucrat & operator=(const Bureaucrat & other);
+        Form & operator=(const Form & other);
 
         /* Exceptions classes */
         class GradeTooHighException : public std::exception
@@ -33,13 +38,14 @@ class Bureaucrat
 
         /* Other member functions */
         const std::string &  getName(void) const;
-        int getGrade(void) const;
-        void incrementGrade(void);
-        void decrementGrade(void);
+        int getSignGrade(void) const;
+        int getExecGrade(void) const;
+        bool getSigned(void) const;
         void verifyGrade(void) const;
+        void beSigned(const Bureaucrat & obj);
 };
 
 /* Helper functions */
-std::ostream & operator<<(std::ostream & output, const Bureaucrat & obj);
+std::ostream & operator<<(std::ostream & output, const Form & obj);
 
 #endif

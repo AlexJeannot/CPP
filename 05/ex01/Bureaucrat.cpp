@@ -76,6 +76,20 @@ void Bureaucrat::verifyGrade(void) const
         throw Bureaucrat::GradeTooLowException();
 }
 
+void Bureaucrat::signForm(Form & obj) const
+{
+    if (obj.getSigned() == true)
+        std::cout << obj.getName() << " is already signed";
+    else if (this->_grade <= obj.getSignGrade())
+    {
+        obj.beSigned(*this);
+        std::cout << this->_name << " signs " << obj.getName();
+    }
+    else
+        std::cout << this->_name << "can't signs " << obj.getName() << " because grade too low";
+    std::cout << std::endl;
+}
+
 
 /* Helper functions */
 
